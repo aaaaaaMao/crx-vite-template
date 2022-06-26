@@ -10,6 +10,7 @@ export default defineConfig({
       targets: [
         { src: 'manifest.json', dest: 'dist' },
         { src: 'popup.html', dest: 'dist' },
+        { src: 'options.html', dest: 'dist' },
       ],
       verbose: false,
       hook: 'writeBundle'
@@ -19,7 +20,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         popup: 'src/popup/popup.ts',
-        background: 'src/background.ts'
+        options: 'src/options/options.ts',
+        background: 'src/background.ts', 
       },
       output: {
         entryFileNames: '[name].js'

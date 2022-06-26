@@ -21,5 +21,6 @@
     "32": "/images/power32.png",
     "48": "/images/power48.png",
     "128": "/images/power128.png"
-  }    
+  },
+  "options_page": "options.html"
 }
