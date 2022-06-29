@@ -4,23 +4,23 @@
   "version": "0.1.0",
   "manifest_version": 3,
   "background": {
-      "service_worker": "background.js"
+    "service_worker": "src/background.ts"
   },
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "/images/power16.png",
-      "32": "/images/power32.png",
-      "48": "/images/power48.png",
-      "128": "/images/power128.png"
+      "16": "public/images/power16.png",
+      "32": "public/images/power32.png",
+      "48": "public/images/power48.png",
+      "128": "public/images/power128.png"
     }    
   },
   "icons": {
-    "16": "/images/power16.png",
-    "32": "/images/power32.png",
-    "48": "/images/power48.png",
-    "128": "/images/power128.png"
+    "16": "public/images/power16.png",
+    "32": "public/images/power32.png",
+    "48": "public/images/power48.png",
+    "128": "public/images/power128.png"
   },
   "options_page": "options.html"
 }

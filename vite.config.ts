@@ -1,30 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import copy from 'rollup-plugin-copy'
+import { crx } from '@crxjs/vite-plugin'
+import manifest from './manifest.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    copy({
-      targets: [
-        { src: 'manifest.json', dest: 'dist' },
-        { src: 'popup.html', dest: 'dist' },
-        { src: 'options.html', dest: 'dist' },
-      ],
-      verbose: false,
-      hook: 'writeBundle'
-    })
+    crx({ manifest }),
   ],
   build: {
     rollupOptions: {
       input: {
-        popup: 'src/popup/popup.ts',
-        options: 'src/options/options.ts',
-        background: 'src/background.ts', 
-      },
-      output: {
-        entryFileNames: '[name].js'
+        popup: 'popup.html',
+        options: 'options.html',
       }
     }
   }

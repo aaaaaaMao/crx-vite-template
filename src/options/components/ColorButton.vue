@@ -1,6 +1,5 @@
 <template>
-<button 
-  :dataset="{color: buttonColor}"
+<button
   :style="{backgroundColor: buttonColor}"
   @click="handleButtonClick"
   ></button>

@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <button id="changeColor">changeColor</button>
+  <button id="changeColor">changeColor!</button>
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
@@ -16,14 +16,12 @@ import HelloWorld from './components/HelloWorld.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 button {
-  height: 30px;
-  width: 30px;
   outline: none;
-  margin: 10px;
+  margin: 2px;
   border: none;
   border-radius: 2px;
 }
