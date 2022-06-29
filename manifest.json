@@ -22,5 +22,12 @@
     "48": "public/images/power48.png",
     "128": "public/images/power128.png"
   },
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "content_scripts": [{
+    "matches": [
+      "https://*/*", 
+      "http://*/*"    
+    ],
+    "js": ["src/floating-window/index.ts"]
+  }]  
 }
