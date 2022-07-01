@@ -1,22 +1,21 @@
 <template>
 <div>
   <div id="floating-window"
-    v-bind:style='coordStyle'
-    v-if='(selectedContent || focusWindow)'>
+    v-bind:style="coordStyle"
+    v-if="(selectedContent || focusWindow)">
     <img id="floating-icon"
-      v-bind:src='iconURL'
-      v-if='!showWindow && !focusWindow && selectedContent'
-      @click='clickIcon'/>
+      v-bind:src="iconURL"
+      v-if="!showWindow && !focusWindow && selectedContent"
+      @click="clickIcon"/>
     <div id="main-window"
-      @mouseover='focusWindow=true'
-      @mouseleave='focusWindow=false'
-      v-if='showWindow || focusWindow'>
+      @mouseover="focusWindow=true"
+      @mouseleave="focusWindow=false"
+      v-if="showWindow || focusWindow">
       <div id="bar">
       </div>
       <div style="width: 300px; height: 200px">
-        {{selectedContent}}
-      </div>
-      
+        {{ selectedContent }}
+      </div>  
     </div>
   </div>
 </div>
@@ -45,17 +44,17 @@ export default {
     coord: function () {
       if (!(this as any).focusWindow) {
         (this as any).coordStyle.top = `${(this as any).coord.y}px`;
-        (this as any).coordStyle.left = `${(this as any).coord.x}px`;
+        (this as any).coordStyle.left = `${(this as any).coord.x}px`
       }
     }
   },
   created() {
     document.body.addEventListener('click', () => {
       if (!this.focusWindow && this.showWindow) {
-        this.showWindow = false;
-        this.selectedContent = '';
+        this.showWindow = false
+        this.selectedContent = ''
       }
-    });
+    })
   },
   methods: {
     clickIcon() {

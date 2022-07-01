@@ -10,7 +10,7 @@ export default {
   props: ['buttonColor'],
   methods: {
     handleButtonClick() {
-      chrome.storage.sync.set({ color: (this as any).buttonColor });
+      chrome.storage.sync.set({ color: (this as any).buttonColor })
     }
   }
 }
