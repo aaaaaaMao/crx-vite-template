@@ -1,7 +1,7 @@
 {
   "name": "Crx Vite Template",
   "description": "A template to build chrome extension with vite and vue.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "src/background.ts"
@@ -12,7 +12,7 @@
     "scripting"
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
       "16": "public/images/power16.png",
       "32": "public/images/power32.png",
@@ -26,7 +26,7 @@
     "48": "public/images/power48.png",
     "128": "public/images/power128.png"
   },
-  "options_page": "options.html",
+  "options_page": "src/options.html",
   "content_scripts": [
     {
       "matches": [
